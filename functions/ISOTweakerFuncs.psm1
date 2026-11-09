@@ -950,12 +950,12 @@ function Strip-WinAI {
     Unload-Registry
     $ProgressPreference = 'SilentlyContinue'
     try {
-        Invoke-WebRequest -Uri "https://github.com/zoicware/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" -OutFile "$env:TEMP\ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" -UseBasicParsing -ErrorAction Stop
+        Invoke-WebRequest -Uri "https://github.com/iFryno/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" -OutFile "$env:TEMP\ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" -UseBasicParsing -ErrorAction Stop
         Write-Status 'Installing RemoveWindowsAI Package...' Output
         Add-WindowsPackage -Path $removeDir -PackagePath "$env:TEMP\ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" -NoRestart -IgnoreCheck
     }
     catch {
-        Write-Status "Unable to Download Package at: https://github.com/zoicware/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" Error
+        Write-Status "Unable to Download Package at: https://github.com/iFryno/RemoveWindowsAI/raw/refs/heads/main/RemoveWindowsAIPackage/$arch/ZoicwareRemoveWindowsAI-$($arch)1.0.0.1.cab" Error
         
     }
     
